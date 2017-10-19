@@ -13,7 +13,19 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
         <div id="app">
-            {{output}}
+            <h1>{{output}}</h1>
+            <div>{{10 + 1}}</div>
+            <input v-model="searchme">
+            <div>
+                Searching for {{searchme}}
+            </div>
+            <ul>
+                <li v-for="index in items">
+                    {{index.todo}}
+                </li>
+            </ul>
+
+            <div>{{ $data  |  json }}</div>
         </div>
         <!-- Add your site or application content here -->
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
